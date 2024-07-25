@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bikes.rental',
+    'bikes.users',
     'rest_framework',
 ]
 
@@ -100,6 +101,10 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+# User model
+
+AUTH_USER_MODEL = 'users.CustomUser'
 
 
 # Internationalization
