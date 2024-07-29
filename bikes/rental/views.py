@@ -3,6 +3,8 @@ from bikes.rental.serializers import BikesSerializer
 from rest_framework.views import APIView
 from rest_framework import status
 from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated
+from rest_framework_simplejwt.authentication import JWTAuthentication
 """
 from django.contrib.auth.models import User
 from rest_framework import generics
@@ -22,6 +24,8 @@ class UserDetail(generics.RetrieveAPIView):
 
 
 class BikesList(APIView):
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAuthenticated]
     """
     List all bikes
     """
