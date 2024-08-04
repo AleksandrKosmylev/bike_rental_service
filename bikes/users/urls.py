@@ -11,7 +11,7 @@ urlpatterns = [
 
 urlpatterns = format_suffix_patterns(urlpatterns, allowed=['html'])
 """
-from django.urls import re_path, include
+from django.urls import re_path
 
 from .views import RegistrationAPIView
 from .views import LoginAPIView
