@@ -8,3 +8,7 @@ class Bikes(models.Model):
 
     def __str__(self):
         return self.bike_name
+
+
+
+
