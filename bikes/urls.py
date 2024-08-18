@@ -24,7 +24,8 @@ urlpatterns = [
     path('auth/', include('djoser.urls')),
     path('auth/', include('djoser.urls.jwt')),
     # path to our account's app endpoints
-    path("api/accounts/", include("accounts.urls"))
+    path("api/accounts/", include("accounts.urls")),
+    path('', include('bikes.rental.urls')),
 ]
 
 
